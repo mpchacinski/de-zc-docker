@@ -6,7 +6,7 @@ print(f"Running pipeline for month {month}")
 
 import pandas as pd
 
-df = pd.DataFrame({"A": [1, 2], "B": [3, 4]})
+df = pd.DataFrame({"A": [1, 2], "B": [3, 4], "Month": [month, month]})
 print(df.head())
 
 df.to_parquet(f"output_day_{sys.argv[1]}.parquet")
